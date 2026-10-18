@@ -42,7 +42,7 @@ export default function LoginPage() {
       >
         Login here
       </button>
-      <Link href="/login" className="text-blue-500 hover:underline">
+      <Link href="/signup" className="text-blue-500 hover:underline">
         Visit signup Page
       </Link>
     </div>
