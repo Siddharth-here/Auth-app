@@ -6,28 +6,27 @@ const userSchema = new mongoose.Schema({
     unique: true,
     required: [true, "Please provide a username"],
   },
-    email: {  
-      type: String,
-      unique: true,
-      required: [true, "Please provide an email"],
-    },
-    password: {
-      type: String,
-      required: [true, "Please provide a password"],
-    },
-    isVerified: {
-      type: Boolean,
-      default: false,
-    },  
-    isAdmin: {
-      type: Boolean,
-      default: false,
-    },
-    forgotPasswordToken: String,
-    forgotPasswordTokenExpiry: Date,
-    verificationToken: String,
-    verificationTokenExpiry: Date,
-
+  email: {
+    type: String,
+    unique: true,
+    required: [true, "Please provide an email"],
+  },
+  password: {
+    type: String,
+    required: [true, "Please provide a password"],
+  },
+  isVerified: {
+    type: Boolean,
+    default: false,
+  },
+  isAdmin: {
+    type: Boolean,
+    default: false,
+  },
+  verifyToken: String,
+  verifyTokenExpiry: Date,
+  forgotPasswordToken: String,
+  forgotPasswordTokenExpiry: Date,
 });
 
 const User = mongoose.models.User || mongoose.model("User", userSchema);
